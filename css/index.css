@@ -21,6 +21,7 @@ body{
   width: 100%;
   z-index: 1;
   height: 70px;
+  border-bottom: solid 1px #404A62;
 }
 
 /* Logo */
