@@ -195,7 +195,49 @@ body{
   padding-bottom: 0;
 }
 
+.portafolio h2{
+  margin: 40px 80px;
+  padding-bottom: 15px;
+  color: #3E516D;
+  font-weight: 900;
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+  border-bottom: solid 5px;
+  border-image: linear-gradient(to right, pink 0%, pink 3%,#ECF0F1 3%, #ECF0F1 100%);
+  border-image-slice: 1;
+}
 
+.portafolio h6{
+  font-family: 'Lato', sans-serif;
+  color: #7F7F7F;
+  font-size: 15px;
+  font-weight: lighter;
+  margin: 0 80px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  width: 1000px;
+}
+
+.portafolio-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portafolio-images .container{
+  
+}
+
+.portafolio-images .recorte{
+  /* margin-left: -100px;
+  margin-right: -100px; */
+}
+
+.portafolio-images img{
+  /* display: inline-block; */
+  height: 320px;
+  margin: 5px;
+}
 /* NOTAS para Responsive
 
 Comienza en un max-width de 1170 */
