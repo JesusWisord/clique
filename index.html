@@ -17,12 +17,12 @@
       </figure>
       <nav class="menu"> <!-- Menú flotante -->
         <ul>
-          <li> <a href="#">INICIO</a> </li>
-          <li> <a href="#servicios">SERVICIOS</a> </li>
-          <li> <a href="#">PORTAFOLIO</a> </li>
-          <li> <a href="#">CLIQUE</a> </li>
-          <li> <a href="#">BLOG</a> </li>
-          <li> <a class="contact" href="#">CONTACTO</a> </li>
+          <li> <a href="#portada">Inicio</a> </li>
+          <li> <a href="#servicios">Servicios</a> </li>
+          <li> <a href="#portafolio">Portafolio</a> </li>
+          <li> <a href="#clique">Clique</a> </li>
+          <li> <a href="#blog">Blog</a> </li>
+          <li> <a class="contact" href="#contacto">Contacto</a> </li>
         </ul>
       </nav>
     </header>
@@ -30,7 +30,7 @@
 
 <!-- Portada -->
 
-<section class="portada">
+<section class="portada" id="portada">
   <div class="background">
     <div class="texto">
       <h3>“El Branding no es sólo una estrategia, es también una forma de vida, una idea, la marca es en realidad el liderazgo.”</h3>
@@ -47,7 +47,7 @@
       <figure>
         <img src="images/marca.jpg" alt="marca" width="">
       </figure>
-      <h3>LANZAMIENTO DE MARCA</h3>
+      <h3>Lanzamiento de Marca</h3>
       <ol>
         <li>Diseño de Identidad Corporativa.</li>
         <li>Naming.</li>
@@ -57,11 +57,11 @@
       </ol>
     </div>
 
-  <div class="multimedia contenedor">
+  <div class="multimedia contenedor" id="multimedia">
     <figure>
       <img src="images/multimedia.jpg" alt="marca" width="">
     </figure>
-    <h3>DISEÑO MULTIMEDIA</h3>
+    <h3>Diseño Multimedia</h3>
     <ol>
       <li>Diseño Gráfico</li>
       <li>Diseño Editorial</li>
@@ -71,14 +71,14 @@
     </ol>
   </div>
 
-  <div class="digital contenedor">
+  <div class="digital contenedor" id="digital">
     <figure>
       <img src="images/Publicidad.jpg" alt="marca" width="">
     </figure>
-    <h3>PUBLICIDAD DIGITAL</h3>
+    <h3>Publicidad Digital</h3>
     <ol>
       <li>Campañas Publicitarias BTL</li>
-      <h3>ADMINISTRACIÓN DE REDES SOCIALES</h3>
+      <h3 class="sub-title">Administración de Redes Sociales</h3>
       <li>Campañas de Facebook, Linkedin, Instagram y  Google Adwords</li>
       <li>Planeación, Investigación, Redacción, Diseño de posteos y SEO</li>
     </ol>
@@ -88,40 +88,57 @@
 
 <!-- Portafolio -->
 
-<section class="portafolio">
-    <h2>PORTAFOLIO</h2>
+<section class="portafolio" id="portafolio">
+    <h2>Portafolio</h2>
     <p class="portafolio-description">Este es un ejemplo de nuestro portafolio de trabajo, diseñamos marcas desde el concepto del nombre (NAMING) hasta el logotipo así como el branding interno y de comunicación.</p>
     <div class="portafolio-images">
-      <div class="image-container-1">
-        <div class="image"><img src="images/Valeria.jpg" alt="310px"></div>
-        <div class="image"><img src="images/Skylux.jpg" class="recorte" alt=""></div>
-        <div class="image"><img src="images/clique.jpg" alt=""></div>
-      </div>
-      <div class="image-container-2">
-        <img src="images/sipyme.jpg" alt="">
-        <img src="images/Valeria Harrel.jpg" alt="">
-        <img src="images/Leon.jpg" alt="">
+      <div class="image-container">
+        <figure  class="item image-1">
+          <img src="images/Skylux.jpg" alt="">
+        </figure> 
+        <figure class="item image-2">
+          <img src="images/Valeria.jpg" alt="">
+        </figure>
+        <figure  class="item image-3">
+          <img src="images/clique.jpg" alt="">
+        </figure>
+        <figure  class="item image-4">
+          <img src="images/sipyme.jpg" alt="">
+        </figure>
+        <figure  class="item image-5">
+          <img src="images/Valeria Harrel.jpg" alt="">
+        </figure>
+        <figure  class="item image-6">
+          <img src="images/Leon.jpg" alt="">
+        </figure>
       </div>
     </div>
 </section>
 
 <!-- Formas de trabajo -->
 
-<section class="trabajo">
+<section class="trabajo" id="trabajo">
 
   <h2>¿Cómo trabajamos?</h2>
 
   <p>Contamos con dos modalidades de trabajo.</p>
 
-  <figure> <img src="" alt=""> </figure>
+  <div class="container-cover">
+    <img class="cover" src="images/trabajo.jpg" alt="cover-formas-trabajo">
+  </div>
 
-  <article class="modalidades">
-    <div class="iguala container"> 
-      <p>Paquetes para PYMES con una tarifa fija al mes.</p>
-      <p>Como su agencia de MKT Digital y Publicidad como outsourcing.</p> 
-    </div>
-    <div class="proyecto container">
-        <p>Se pueden contratar nuestros servicios de manera individual dependiendo de las necesidades que tenga tu empresa.</p>
+  <article class="modalidades" id="modalidades">
+    
+    <div class="container">
+      <div class="iguala"> 
+        <h3>Por Iguala</h3>
+        <h6>Paquetes para PYMES con una tarifa fija al mes.</h6>
+        <h6>Como su agencia de MKT Digital y Publicidad como outsourcing.</h6> 
+      </div>
+      <div class="proyecto">
+        <h3>Por proyecto</h3>
+          <h6>Se pueden contratar nuestros servicios de manera individual dependiendo de las necesidades que tenga tu empresa.</h6>
+      </div>
     </div>
   </article>
 
@@ -130,18 +147,72 @@
 
 <!-- Proceso Creativo -->
 
+<section class="proceso">
+    <h2>¿Cómo trabajamos?</h2>
 
+    <p>Se realiza una investigación del producto o servicio, un estudio de competencia y de fortalezas y se genera el diseño y una estrategia adecuada para la obtención de alcance y engagement con la audiencia a la que queremos llegar.</p>
+    
+    <div class="container">
+      <div class="branding item">
+        <img src="images/branding.png" alt="">
+        <h3>Branding</h3>
+        <p>La construcción de marca, diseño de nombre comercial (Naming), logotipo, imagen corporativa.</p>
+        <p>
+            Posicionamiento estratégico, tono de comunicación y la personalidad de marca.</p>
+      </div>
+      <div class="multimedia item">
+        <img src="images/diseño.png" alt="">
+        <h3>Diseño Multimedia</h3>
+        <p>Diseño enfocado a crear engagement con tu audiencia.</p>
+        <p>Diseño web responsive.<br>Fotografía de producto para generar ventas.</p>
+      </div>
+      <div class="publicidad item">
+        <img src="images/publicidad.png" alt="">
+        <h3>Publicidad Digital</h3>
+        <p>Diseño de Publicidad Medios Impresos y Digitales.</p>
+        <p>Inversión e implementación de publicidad en redes sociales, banners, campañas de mailing.</p>
+      </div>
+    </div>
+</section>
 <!-- Contacto -->
 
+<!-- <section class="contacto">
+    <h2>Contacto</h2>
 
-
+</section> -->
 <!-- Footer -->
 
-<!-- Clique -->
+<footer class="footer">
+  <!-- Clique -->
+  <div class="item aviso">
+    <p class="clique">Clique</p>
+    <p>Somos un equipo creativo de arte, diseño y publicidad enfocado a la resolución visual de problemas de comunicación gráficos.
+  
+    </br>Publicidad en Redes Sociales.</p>
+    <p>Branding Emocional para crear un engagement con la audiencia y quedar en la mente del usuario.</p>
+    <!-- Aviso de privacidad -->
+  
+    <a href="http://www.cliquebrand.com/aviso-de-privacidad/">Aviso de Privacidad</a>
+  </div>
 
-<!-- Aviso de privacidad -->
+  <div class="item contact">
+    <div class="left">
+        <p>Juan Pablo II 220, Barrio San Mateo, 52140 Metepec, Méx., México</p>
+    </div>
+       <div class="right">
+         <p>
+          contacto@cliquebrand.com
+        </p> 
+         <p class="phone">
+           722 555 7850
+         </p>
+        </div>
+  </div>
+  
+  <!-- Dirección y datos de contacto -->
 
-<!-- Dirección y datos de contacto -->
+</footer>
+
 
 
   </body>
