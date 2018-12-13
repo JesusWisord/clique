@@ -1,14 +1,46 @@
-/* General */
+/* --------------- icono --------------------- */
 
-/* Header */
-/* .body{
-  margin: 0;
-  padding: 0;
-  border: 0;
-} */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../icons/fonts/icomoon.eot?frgqqx');
+  src:  url('../icons/fonts/icomoon.eot?frgqqx#iefix') format('embedded-opentype'),
+    url('../icons/fonts/icomoon.ttf?frgqqx') format('truetype'),
+    url('../icons/fonts/icomoon.woff?frgqqx') format('woff'),
+    url('../icons/fonts/icomoon.svg?frgqqx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+
+/* ------------------ CONFIGURACIONES GENERALES/CONSTANTES -------------- */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 body{
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 h2{
@@ -27,7 +59,7 @@ h2{
 p{
   font-family: 'Lato', sans-serif;
   color: #7F7F7F;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: lighter;
   margin: 0 80px;
   line-height: 30px;
@@ -36,14 +68,30 @@ p{
   /* padding-bottom: 20px; */
 }
 
+.hamburger{
+  color: black;
+  background: white;
+  font-size: 60px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  right: 25px;
+  z-index: 2;
+  top: 5px;
+  display: none;
+  padding-left: 90px;
+}
+
+/* --------------- Header --------------------- */
+
 .header{
   display: inline;
   background: white;
-
   position: fixed;
   top: 0;
   right:0;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
   height: 70px;
   border-bottom: solid 1px #404A62;
@@ -72,15 +120,16 @@ p{
   display: inline-block;
   position: absolute;
   right: 0;
+  /* left: 0; */
   z-index: 1;
 }
 
 
 
 .menu li{
-  font-family: 'Lato', sans-serif;
+  /* font-family: 'Lato', sans-serif; */
   display: inline-block;
-  font-size: 14px;
+  /* font-size: 14px; */
   font-weight: 700;
   font-style: normal;
   position: relative;
@@ -89,7 +138,7 @@ p{
 
 .menu li a{
   text-decoration: none;
-  padding-right: 50px;
+  padding-right: 40px;
   padding-left: 40px;
   align-items: baseline;
   color: #404A62;
@@ -100,6 +149,7 @@ p{
   color: pink;
   transition-property: color;
   transition-duration: .5s;
+  will-change: color;
 }
 
 .menu li .contact{
@@ -115,6 +165,7 @@ p{
   transition-property: background-color;
   transition-duration: .5s;
   color: white;
+  will-change: background-color;
 }
 
 
@@ -124,7 +175,7 @@ p{
   position: relative;
   font-size: 30px;
   color: white;
-  font-family: 'Lato', sans-serif;
+  /* font-family: 'Lato', sans-serif; */
   font-weight: 900;
 }
 
@@ -133,8 +184,8 @@ p{
   background-image: url('../images/portada.jpg');
   background-size: cover;
   background-position: center;
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
   width: 100%;
   position: relative;
   right: 0px;
@@ -146,7 +197,7 @@ p{
   width: 500px;
   font-size: 35px;
   color: white;
-  font-family: 'Lato', sans-serif;
+  /* font-family: 'Lato', sans-serif; */
   font-weight: 900;
   position: relative;
   top: 60px;
@@ -171,37 +222,50 @@ p{
   margin-top: 20px;
 } */
 
-.servicios{
+.servicios:before{
+  height: 20px;
+  display: block;
+  content: '';
+}
+
+.servicios .container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 100px;
+  /* font-size: 16px; */
+  /* grid-column-gap: 100px; */
 }
 
-.servicios .contenedor{
+.servicios .item{
   box-shadow: 0px 2px 6px rgba(0,5,72,0.15);
   margin-top: 20px;
+  font-weight: 400;
+  color: #404A62;
+  /* padding: 10px 0px 50px 0; */
+  margin: 30px 15px;
+  border-radius: 10px;
 }
 
 .servicios{
-  display: flex;
-  justify-content: space-evenly;
+  /* display: flex; */
+  /* justify-content: space-evenly; */
   /* margin: auto; */
   width: auto;
   margin: 0 80px;
 }
 
 .servicios .sub-title{
-  padding-right: 25px;
+  text-align: center;
 }
 
 .servicios img {
-  width: 340px;
+  width: 100%;
 }
 
-.servicios figure{
+.servicios .item figure{
   margin: 0;
   padding: 0;
-
+  width: 100%;
+  /* overflow: hidden; */
 }
 
 .servicios h3{
@@ -212,16 +276,11 @@ p{
   text-transform: uppercase;
 }
 
-.servicios div {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  color: #404A62;
-  padding: 10px 5px 50px 5px;
-  margin: 30px 15px;
-}
+
 
 .servicios ol{
   list-style: none;
+  margin-right: 20px;
 }
 
 .servicios li{
@@ -255,8 +314,15 @@ p{
   border-image-slice: 1;
 } */
 
+.portafolio:before{
+  height: 50px;
+  display: block;
+  content: '';
+}
+
 .portafolio{
   /* width: 1000px; */
+  /* font-size: 16px; */
   align-content: center;
 }
 
@@ -265,7 +331,7 @@ p{
   color: #7F7F7F;
   font-size: 15px;
   font-weight: lighter;
-  margin: 0 80px;
+  margin: 0 1%;
   line-height: 30px;
   letter-spacing: 2px;
   width: 1000px;
@@ -276,6 +342,7 @@ p{
 }
 
 .portafolio .image-container{
+  margin-top: 50px; 
   display: grid;
   /* width: 1000px; */
   grid-template: 1fr 1fr / 100px repeat(3, 1fr) 100px;
@@ -329,9 +396,14 @@ p{
 
  /* ------------ MODOS DE TRABAJO ------------- */
 
-
+ .trabajo:before{
+  height: 50px;
+  display: block;
+  content: '';
+}
  .trabajo{
    margin-top: 70px;
+   /* font-size: 16px; */
  }
  .modalidades .container{
     /* width: 1000px; */
@@ -347,6 +419,7 @@ p{
  .trabajo .container-cover{
    display: flex;
    justify-content: center;
+   overflow: hidden;  
  }
 
  .cover{
@@ -366,7 +439,7 @@ p{
     text-align: center;
     padding: 0 30px 30px;
     margin: -20px;
-    font-size: 14px;
+    /* font-size: 14px; */
     line-height: 24px;
     position: relative;
     bottom: 100px;
@@ -400,6 +473,12 @@ p{
 
  /* -------- Proceso Creativo --------- */
 
+ .proceso:before{
+  height: 50px;
+  display: block;
+  content: '';
+}
+
  .proceso h3{
   font-family: 'Lato', sans-serif;
   text-align: center;
@@ -408,17 +487,18 @@ p{
   font-size: 20px;
   text-transform: uppercase;
   color: #303F5A;
-  margin-bottom: -30px;
+  margin-bottom: 20px;
 }
 
 .proceso .container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* font-size: 16px; */
 }
 
 .proceso .container p{
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  /* font-size: 14px; */
   text-align: center;
   line-height: 25px;
   margin-top: 30px;
@@ -433,7 +513,7 @@ p{
 .proceso .container .item{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
 }
 
@@ -441,11 +521,16 @@ p{
 
 .footer{
   height: 400px;
-  margin-top: 150px;
+  margin-top: 100px;
   background: #303F5A;
   color: white;
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 60% 25%;
+  overflow: hidden;
+  width: 100vw;
+  grid-gap: 100px;
+  /* font-size: 16px; */
+  /* align-items: left; */
 }
 
 .footer .item p{
@@ -454,26 +539,28 @@ p{
 }
 
 .footer .aviso{
-  margin: 40px 0 0;
-  width: 700px;
+  /* margin: 40px 0 0; */
+  width: 100%;
 }
 
 .footer .contact{
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 55% 45%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-content: center;
   margin-top: 60px;
 }
 
 .footer .contact p{
   margin: 40px 0 0;
-  padding-left: 20px;
+  /* padding-left: 20px; */
 }
 
 .aviso .clique{
   font-weight: bold;
   font-size: 30px;
   margin-bottom: 20px;
+  width: 50%;
 }
 
 .aviso a{
@@ -488,6 +575,243 @@ p{
 
 .contact .phone{
   margin-top: 10px !important;
+}
+
+.aviso{
+  justify-self: left;
+  font-size: 1em;
+}
+
+/* ----------------- Responsive Design ------------------- */
+
+@media screen and (max-width: 1170px){
+  
+  .portada .background{
+    height: 600px
+  }
+
+  .menu{
+    z-index: -1;
+    /* transition-duration: .1s; */
+    /* position: absolute; */
+    /* right: 0; */
+  }
+
+  .menu.is-active{
+    display: inline;
+  }
+
+  .menu li{
+    height: 0px;
+    width: 0px;
+    transition-duration: .2s;
+    /* transition-delay: .5s; */
+  }
+  .menu.is-active li{
+    height: 50px;
+    width: 200px;
+    top: 55px;
+  }
+
+  .menu li{
+    display: flex;
+    flex-direction: row;
+    background: rgba(80,80,80,.5);
+    width: 300px;
+    /* height: 50px; */
+    /* padding: 5px 10px; */
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu li a{
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-self: center;
+    line-height: 50px;
+  }
+
+  .menu li a:hover{
+    background-color: pink;
+    transition-property: background-color;
+    transition-duration: .3s;
+    color: black;
+  }
+
+  .menu li .contact:hover{
+    color: black;
+  }
+  .menu li .contact{
+    background: rgba(80,80,80,0);
+    padding: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+  .hamburger{
+    display: block;
+  }
+
+  .footer{
+    grid-gap: 50px;
+  }
+}
+
+@media screen and (max-width: 1100px){
+.portada .background{
+    height: 500px;
+  }
+  
+  .servicios .container{
+    display: block;
+    font-size: 1.1em;
+  }
+
+  .portafolio .image-container{
+    margin-top: 70px;
+    grid-template: repeat(3,200px) / repeat(2, 40%);
+    grid-template-areas: "image-1 image-2" 
+                         "image-3 image-4"
+                         "image-5 image-6";
+    justify-items: center;
+    align-items: stretch;
+  }
+
+  .footer .aviso, .footer .contact{
+    font-size: .8em;
+    line-height: 1em;
+  }
+
+  .footer .contact{
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: top;
+  }
+
+  .footer .contact .left{
+    width: 350px;
+  }
+
+  .footer a{
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .iguala, .proyecto {
+    padding: 0;
+  }
+}
+
+
+
+@media screen and (max-width: 970px){
+  p{
+    font-size: 16px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+  
+  .proceso .item{
+    display: grid !important;
+    grid-template-columns: 35% 60%;
+    align-items: center;
+  }
+
+  .proceso .left img{
+    width: 100%;
+    /* align-self: right; */
+  }
+  
+  .proceso .right p, .proceso .right h3{
+    /* width: 100%; */
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer .contact .left {
+    width: 200px;
+  }
+
+  .proceso p{
+    margin: 0 40px;
+  }
+
+  .proceso .right h3{
+    margin-bottom: 15px;
+  }
+
+  .proceso .container{
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: initial;
+  }
+
+  .footer{
+    grid-template-columns: 55% 45%;
+    height: 55vh;
+  }
+
+  .header{
+    left: 0;
+  }
+
+  .footer .aviso p{
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .footer .clique{
+    font-size: 20px !important;
+    margin-bottom: 0;
+    /* text-align: center;  */
+  }
+
+  .footer .aviso{
+    line-height: .6em;
+  }
+
+  .footer .aviso a{
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 785px){
+  .footer{
+    grid-template-rows: repeat(4,1fr);
+    grid-template-columns: initial;
+    grid-template-areas: "aviso"
+                         "contacto";
+    align-items: center;
+    justify-items: center;
+    height: 580px; 
+  }
+
+  .footer .aviso{
+    grid-area: aviso;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer .aviso a{
+    margin-top: 40px;
+  }
+
+  .footer .contact{
+    grid-area: contacto;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .footer .clique{
+    width: initial;
+    text-align: center;
+  }
 }
 
 

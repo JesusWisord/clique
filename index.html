@@ -3,10 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Clique - Comunicación Estratégica</title>
+    <link rel="icon" type="image/ico" href="images/clique-favicon.ico" />
     <link href="https://fonts.googleapis.com/css?family=Lato:700,900,400" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <i class="hamburger icon-menu" id="hamburger-menu"></i>
     <!-- Header -->
     <header class="header"> <!-- Logo -->
       <figure class="logosolo">
@@ -20,20 +23,20 @@
           <li> <a href="#portada">Inicio</a> </li>
           <li> <a href="#servicios">Servicios</a> </li>
           <li> <a href="#portafolio">Portafolio</a> </li>
-          <li> <a href="#clique">Clique</a> </li>
-          <li> <a href="#blog">Blog</a> </li>
+          <li> <a href="#trabajo">Clique</a> </li>
+          <li> <a href="#proceso">Blog</a> </li>
           <li> <a class="contact" href="#contacto">Contacto</a> </li>
         </ul>
       </nav>
     </header>
-
-
-<!-- Portada -->
-
-<section class="portada" id="portada">
-  <div class="background">
-    <div class="texto">
-      <h3>“El Branding no es sólo una estrategia, es también una forma de vida, una idea, la marca es en realidad el liderazgo.”</h3>
+    
+    
+    <!-- Portada -->
+    
+    <section class="portada" id="portada">
+      <div class="background">
+        <div class="texto">
+          <h3>“El Branding no es sólo una estrategia, es también una forma de vida, una idea, la marca es en realidad el liderazgo.”</h3>
     </div>
       <div class="autor"> <h3>- Onyi Anyado</h3> </div>
 
@@ -43,7 +46,8 @@
 <!-- Servicios -->
 
 <section class="servicios" id="servicios">
-    <div class="marca contenedor">
+   <div class="container"> 
+     <div class="marca item">
       <figure>
         <img src="images/marca.jpg" alt="marca" width="">
       </figure>
@@ -57,7 +61,7 @@
       </ol>
     </div>
 
-  <div class="multimedia contenedor" id="multimedia">
+  <div class="multimedia item" id="multimedia">
     <figure>
       <img src="images/multimedia.jpg" alt="marca" width="">
     </figure>
@@ -71,7 +75,7 @@
     </ol>
   </div>
 
-  <div class="digital contenedor" id="digital">
+  <div class="digital item" id="digital">
     <figure>
       <img src="images/Publicidad.jpg" alt="marca" width="">
     </figure>
@@ -83,6 +87,7 @@
       <li>Planeación, Investigación, Redacción, Diseño de posteos y SEO</li>
     </ol>
   </div>
+</div>
 
 </section>
 
@@ -147,30 +152,41 @@
 
 <!-- Proceso Creativo -->
 
-<section class="proceso">
-    <h2>¿Cómo trabajamos?</h2>
+<section class="proceso" id="proceso">
+    <h2>Proceso Creativo</h2>
 
     <p>Se realiza una investigación del producto o servicio, un estudio de competencia y de fortalezas y se genera el diseño y una estrategia adecuada para la obtención de alcance y engagement con la audiencia a la que queremos llegar.</p>
     
     <div class="container">
       <div class="branding item">
-        <img src="images/branding.png" alt="">
-        <h3>Branding</h3>
-        <p>La construcción de marca, diseño de nombre comercial (Naming), logotipo, imagen corporativa.</p>
-        <p>
-            Posicionamiento estratégico, tono de comunicación y la personalidad de marca.</p>
+        <div class="left">
+          <img src="images/branding.png" alt="">
+        </div>
+        <div class="right">
+          <h3>Branding</h3>
+          <p>La construcción de marca, diseño de nombre comercial (Naming), logotipo, imagen corporativa.</p>
+          <p>Posicionamiento estratégico, tono de comunicación y la personalidad de marca.</p>
+        </div>
       </div>
       <div class="multimedia item">
-        <img src="images/diseño.png" alt="">
-        <h3>Diseño Multimedia</h3>
-        <p>Diseño enfocado a crear engagement con tu audiencia.</p>
-        <p>Diseño web responsive.<br>Fotografía de producto para generar ventas.</p>
+        <div class="left">
+          <img src="images/diseño.png" alt="">
+        </div>
+        <div class="right">
+          <h3>Diseño Multimedia</h3>
+          <p>Diseño enfocado a crear engagement con tu audiencia.</p>
+          <p>Diseño web responsive.<br>Fotografía de producto para generar ventas.</p>
+        </div>
       </div>
       <div class="publicidad item">
-        <img src="images/publicidad.png" alt="">
-        <h3>Publicidad Digital</h3>
-        <p>Diseño de Publicidad Medios Impresos y Digitales.</p>
-        <p>Inversión e implementación de publicidad en redes sociales, banners, campañas de mailing.</p>
+        <div class="left">
+          <img src="images/publicidad.png" alt="">
+        </div>
+        <div class="right">
+          <h3>Publicidad Digital</h3>
+          <p>Diseño de Publicidad Medios Impresos y Digitales.</p>
+          <p>Inversión e implementación de publicidad en redes sociales, banners, campañas de mailing.</p>
+        </div>
       </div>
     </div>
 </section>
@@ -182,7 +198,7 @@
 </section> -->
 <!-- Footer -->
 
-<footer class="footer">
+<footer class="footer" id="contacto">
   <!-- Clique -->
   <div class="item aviso">
     <p class="clique">Clique</p>
@@ -214,6 +230,7 @@
 </footer>
 
 
-
+  <script src="scripts/script.js">
+  </script>
   </body>
 </html>
