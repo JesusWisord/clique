@@ -823,6 +823,7 @@ p{
   }
 }
 
+
 @media screen and (max-width: 620px){
 
   p{
@@ -859,6 +860,57 @@ p{
   padding-left: 30px;
   }
 
+}
+
+
+@media screen and (max-width: 400px){
+  
+  .iguala, .proyecto {
+    width: 150px;
+  }
+
+  .footer{
+    height: 700px;
+  }
+
+  .proceso .container{
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 380px){
+  .footer{
+    height: 720px;
+  }
+
+  .footer .aviso a{
+    font-size: 1.5em;
+  }
+
+  .texto h3, .autor h3{
+    background: rgba(20, 20, 20, .3);
+    border-radius: 20px;
+  }
+
+  .autor h3{
+    width: 110px;
+  }
+
+  .servicios h3{
+    font-size: 15px;
+  }
+
+  .servicios .item{
+    font-size: .8em;
+  }
+
+  .proyecto h3, .iguala h3{
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+
+  
 }
 
 
