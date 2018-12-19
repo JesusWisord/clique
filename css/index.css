@@ -347,9 +347,9 @@ p{
   /* width: 1000px; */
   grid-template: 1fr 1fr / 100px repeat(3, 1fr) 100px;
   justify-items: center;
-  align-items: stretch;
+  align-items: center;
   grid-gap: 10px;
-  justify-content: center;
+  margin: 0 auto;
   grid-template-areas: ". image-1 image-2 image-3 ."
                        ". image-4 image-5 image-6 .";
 }
@@ -361,17 +361,17 @@ p{
 }
 
 .image-container img {
-  width: 120%;
+  width: 100%;
   vertical-align: top;
   height: 100%;
-  position: relative;
+  /* position: relative; */
   /* bottom: 10%; */
-  right: 10%;
+  /* right: 10%; */
 }
 
 .image-container figure{
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: block;
 }
 
@@ -676,17 +676,22 @@ p{
   }
 
   .servicios .item{
-    width: 100%;
+    position: relative;
+    width: 120%;
+    height: 120%;
+    right: 10%;
+    bottom: 10%;
   }
 
   .portafolio .image-container{
     margin-top: 70px;
-    grid-template: repeat(3,200px) / repeat(2, 40%);
+    grid-template: repeat(3,250px) / repeat(2, 45%);
     grid-template-areas: "image-1 image-2" 
                          "image-3 image-4"
                          "image-5 image-6";
-    justify-items: center;
-    align-items: stretch;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
   }
 
   .footer .aviso, .footer .contact{
@@ -727,13 +732,13 @@ p{
   }
   
   .proceso .item{
-    display: grid !important;
+    /* display: grid !important;
     grid-template-columns: 35% 60%;
-    align-items: center;
+    align-items: center; */
   }
 
   .proceso .left img{
-    width: 100%;
+    /* width: 100%; */
     /* align-self: right; */
   }
   
@@ -741,6 +746,12 @@ p{
     /* width: 100%; */
     padding: 0;
     margin: 0;
+  }
+
+  .image-container img{
+    /* height: auto;
+    position: initial;
+    overflow: hidden; */
   }
 
   .footer .contact .left {
@@ -860,6 +871,31 @@ p{
   padding-left: 30px;
   }
 
+  .portafolio .image-container{
+    grid-template-rows: repeat(6,250px);
+    grid-template-columns: 90%;
+    grid-template-areas: "image-1"
+                          "image-2"
+                          "image-3"
+                          "image-4"
+                          "image-5"
+                          "image-6";
+  }
+
+  .portafolio .image-container .item{
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .portafolio .image-container .item img{
+    width: 100%;
+    position: relative;
+    bottom: 10%;
+  }
+
+
+
 }
 
 
@@ -879,12 +915,17 @@ p{
 }
 
 @media screen and (max-width: 380px){
+  
+  .header .logosolo{
+    left:0;
+  }
+  
   .footer{
     height: 720px;
   }
 
   .footer .aviso a{
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .texto h3, .autor h3{
