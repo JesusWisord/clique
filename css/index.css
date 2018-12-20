@@ -513,15 +513,19 @@ p{
 .proceso .container .item{
   display: flex;
   flex-direction: column;
-  justify-content: top;
+  justify-items: center;
   align-items: center;
+  padding-bottom: 50px;
+}
+
+.proceso .left img{
+      width: 100%;
 }
 
 /* --------------- Footer ------------------- */
 
 .footer{
   height: 400px;
-  margin-top: 100px;
   background: #303F5A;
   color: white;
   display: grid;
@@ -571,6 +575,7 @@ p{
   text-align: center;
   margin: 30px 80px 0 80px;
   color: white;
+  padding-bottom:20px;
 }
 
 .contact .phone{
@@ -773,7 +778,7 @@ p{
 
   .footer{
     grid-template-columns: 55% 45%;
-    height: 55vh;
+    height: auto;
   }
 
   .header{
@@ -919,9 +924,18 @@ p{
   .header .logosolo{
     left:0;
   }
+
+  .hamburger{
+    background: transparent;
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    top: 7px;
+  }
   
   .footer{
-    height: 720px;
+    height: 800px;
   }
 
   .footer .aviso a{
