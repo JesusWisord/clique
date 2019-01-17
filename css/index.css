@@ -86,15 +86,15 @@ p{
 /* --------------- Header --------------------- */
 
 .header{
-  display: inline;
+  display: block;
   background: white;
   position: fixed;
   top: 0;
   right:0;
   width: 100vw;
   z-index: 1;
-  height: 70px;
-  border-bottom: solid 1px #404A62;
+  height: 68px;
+  border-bottom: solid 2px #404A62;
 }
 
 /* Logo */
@@ -103,8 +103,8 @@ p{
   display: inline;
   padding: 0;
   position: relative;
-  left: 15px;
-  top: 8px;
+  left: 20px;
+  top: 10px;
 }
 
 .logotexto{
@@ -138,8 +138,7 @@ p{
 
 .menu li a{
   text-decoration: none;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding: 35px 40px 24px;
   align-items: baseline;
   color: #404A62;
   text-transform: uppercase;
@@ -513,6 +512,7 @@ p{
 .proceso .container .item{
   display: flex;
   flex-direction: column;
+
   justify-items: center;
   align-items: center;
   padding-bottom: 50px;
@@ -520,12 +520,14 @@ p{
 
 .proceso .left img{
       width: 100%;
-}
+      margin: 0 auto;
+      position: relative;
+      bottom: 20px;}
 
 /* --------------- Footer ------------------- */
 
 .footer{
-  height: 400px;
+  height: auto;
   background: #303F5A;
   color: white;
   display: grid;
@@ -540,6 +542,8 @@ p{
 .footer .item p{
   color: white;
   margin-top: 25px;
+  display: inline-block;
+  line-height: 30px;
 }
 
 .footer .aviso{
@@ -557,6 +561,7 @@ p{
 
 .footer .contact p{
   margin: 40px 0 0;
+  display: block;
   /* padding-left: 20px; */
 }
 
@@ -637,12 +642,13 @@ p{
     text-align: center;
     align-self: center;
     line-height: 50px;
+    padding: 0 40px;
   }
 
   .menu li a:hover{
     background-color: pink;
     transition-property: background-color;
-    transition-duration: .3s;
+    transition-duration: .8s;
     color: black;
   }
 
@@ -807,13 +813,14 @@ p{
 
 @media screen and (max-width: 785px){
   .footer{
-    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
     grid-template-columns: initial;
     grid-template-areas: "aviso"
                          "contacto";
     align-items: center;
     justify-items: center;
-    height: 580px; 
+    grid-row-gap: 0;
+    height: auto; 
   }
 
   .footer .aviso{
@@ -833,6 +840,10 @@ p{
     align-self: center;
   }
 
+  .footer .contact p{
+    margin-top: 5px;
+  }
+
   .footer .clique{
     width: initial;
     text-align: center;
@@ -844,6 +855,7 @@ p{
 
   p{
     font-size: 14px;
+    letter-spacing: 0;
   }
 
   h2{
@@ -935,7 +947,7 @@ p{
   }
   
   .footer{
-    height: 800px;
+    height: 720px;
   }
 
   .footer .aviso a{
