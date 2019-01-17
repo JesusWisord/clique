@@ -80,7 +80,7 @@ p{
   z-index: 2;
   top: 5px;
   display: none;
-  padding-left: 90px;
+  /* padding-left: 90px; */
 }
 
 /* --------------- Header --------------------- */
@@ -353,7 +353,7 @@ p{
                        ". image-4 image-5 image-6 .";
 }
 
-.item{
+.portafolio .image-container.item{
   /* background: lightblue;
   border: solid red 1px; */
   margin: 0;
@@ -742,16 +742,16 @@ p{
     font-size: 30px;
   }
   
-  .proceso .item{
-    /* display: grid !important;
+  /* .proceso .item{
+    display: grid !important;
     grid-template-columns: 35% 60%;
-    align-items: center; */
+    align-items: center;
   }
 
   .proceso .left img{
-    /* width: 100%; */
-    /* align-self: right; */
-  }
+    width: 100%;
+    align-self: right;
+  } */
   
   .proceso .right p, .proceso .right h3{
     /* width: 100%; */
@@ -759,10 +759,13 @@ p{
     margin: 0;
   }
 
-  .image-container img{
-    /* height: auto;
-    position: initial;
-    overflow: hidden; */
+  .image-container figure{
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
   }
 
   .footer .contact .left {
@@ -884,9 +887,9 @@ p{
   font-size: 16px;
   }
 
-  .hamburger{
+  /* .hamburger{
   padding-left: 30px;
-  }
+  } */
 
   .portafolio .image-container{
     grid-template-rows: repeat(6,250px);
