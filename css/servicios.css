@@ -89,9 +89,9 @@
 
   .servicios .item{
     position: relative;
-    width: 120%;
+    width: 110%;
     height: 120%;
-    right: 10%;
+    /* right: 10%; */
     bottom: 10%;
   }
 

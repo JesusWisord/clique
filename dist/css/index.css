@@ -665,6 +665,15 @@ Comienza en un max-width de 1170 */
   .portada .background{
     height: 600px
   }
+    
+  .image-container figure {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
   
   .footer{
     grid-gap: 50px;
@@ -677,7 +686,6 @@ Comienza en un max-width de 1170 */
   }
   
   .image-container figure{
-
     display: flex;
     align-content: center;
     justify-content: center;
@@ -801,15 +809,15 @@ Comienza en un max-width de 1170 */
 
   .servicios .item{
     position: relative;
-    width: 120%;
+    width: 110%;
     height: 120%;
-    right: 10%;
+    /* right: 10%; */
     bottom: 10%;
   }
 
   .portafolio .image-container{
     margin-top: 70px;
-    grid-template: repeat(3,250px) / repeat(2, 45%);
+    grid-template: repeat(3,1fr) / repeat(2, 45%);
     grid-template-areas: "image-1 image-2" 
                          "image-3 image-4"
                          "image-5 image-6";
