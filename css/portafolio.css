@@ -1,0 +1,80 @@
+.portafolio:before{
+  height: 50px;
+  display: block;
+  content: '';
+}
+
+.portafolio{
+  /* width: 1000px; */
+  /* font-size: 16px; */
+  align-content: center;
+}
+
+.portafolio h6{
+  font-family: 'Lato', sans-serif;
+  color: #7F7F7F;
+  font-size: 15px;
+  font-weight: lighter;
+  margin: 0 1%;
+  line-height: 30px;
+  letter-spacing: 2px;
+  width: 1000px;
+}
+
+.portafolio p{
+  margin: 0 80px;
+  padding-bottom: 50px;
+}
+
+.portafolio .image-container{
+  margin-top: 50px; 
+  display: grid;
+  /* width: 1000px; */
+  grid-template: 1fr 1fr / 100px repeat(3, 1fr) 100px;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 10px;
+  margin: 0 auto;
+  grid-template-areas: ". image-1 image-2 image-3 ."
+                       ". image-4 image-5 image-6 .";
+}
+
+.portafolio .image-container.item{
+  /* background: lightblue;
+  border: solid red 1px; */
+  margin: 0;
+}
+
+.image-container img {
+  width: 100%;
+  vertical-align: top;
+  height: 100%;
+  /* position: relative; */
+  /* bottom: 10%; */
+  /* right: 10%; */
+}
+
+.image-container figure{
+  height: 100%;
+  /* overflow: hidden; */
+  display: block;
+}
+
+.image-1{
+  grid-area: image-1;
+}
+.image-2{
+  grid-area: image-2;
+}
+.image-3{
+  grid-area: image-3;
+}
+.image-4{
+  grid-area: image-4;
+}
+.image-5{
+  grid-area: image-5;
+}
+.image-6{
+  grid-area: image-6;
+}

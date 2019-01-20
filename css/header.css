@@ -1,0 +1,150 @@
+.header{
+  display: block;
+  background: white;
+  position: fixed;
+  top: 0;
+  right:0;
+  width: 100vw;
+  z-index: 1;
+  height: 68px;
+  border-bottom: solid 2px #404A62;
+}
+
+/* Logo */
+
+.logosolo{
+  display: inline;
+  padding: 0;
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+
+.logotexto{
+  display: inline;
+  padding: 0;
+  position: relative;
+  right: 60px;
+}
+
+/* Menu */
+
+.menu{
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  /* left: 0; */
+  z-index: 1;
+}
+
+
+
+.menu li{
+  /* font-family: 'Lato', sans-serif; */
+  display: inline-block;
+  /* font-size: 14px; */
+  font-weight: 700;
+  font-style: normal;
+  position: relative;
+  top: 10px;
+}
+
+.menu li a{
+  text-decoration: none;
+  padding: 35px 40px 24px;
+  align-items: baseline;
+  color: #404A62;
+  text-transform: uppercase;
+}
+
+.menu li a:hover {
+  color: pink;
+  transition-property: color;
+  transition-duration: .5s;
+  will-change: color;
+}
+
+.menu li .contact{
+  background: #404A62;
+  padding: 10px 50px;
+  margin-right: 10px;
+  border-radius: 15px;
+  color: white;
+}
+
+.menu li .contact:hover{
+  background-color: pink;
+  transition-property: background-color;
+  transition-duration: .5s;
+  color: white;
+  will-change: background-color;
+}
+
+@media screen and (max-width: 1170px){
+  .menu{
+    z-index: -1;
+    /* transition-duration: .1s; */
+    /* position: absolute; */
+    /* right: 0; */
+  }
+
+  .menu.is-active{
+    display: inline;
+  }
+
+  .menu li{
+    height: 0px;
+    width: 0px;
+    transition-duration: .2s;
+    /* transition-delay: .5s; */
+  }
+
+  .menu.is-active li{
+    height: 50px;
+    width: 200px;
+    top: 55px;
+  }
+
+  .menu li{
+    display: flex;
+    flex-direction: row;
+    background: rgba(80,80,80,.5);
+    width: 300px;
+    /* height: 50px; */
+    /* padding: 5px 10px; */
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu li a{
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-self: center;
+    line-height: 50px;
+    padding: 0 40px;
+  }
+
+  .menu li a:hover{
+    background-color: pink;
+    transition-property: background-color;
+    transition-duration: .8s;
+    color: black;
+  }
+
+  .menu li .contact:hover{
+    color: black;
+  }
+  .menu li .contact{
+    background: rgba(80,80,80,0);
+    padding: 0;
+    margin-right: 0;
+    border-radius: 0;
+  }
+
+  .hamburger{
+    display: block;
+  }
+}

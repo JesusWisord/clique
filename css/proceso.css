@@ -1,0 +1,51 @@
+.proceso:before{
+  height: 50px;
+  display: block;
+  content: '';
+}
+
+ .proceso h3{
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  padding: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #303F5A;
+  margin-bottom: 20px;
+}
+
+.proceso .container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* font-size: 16px; */
+}
+
+.proceso .container p{
+  font-family: 'Lato', sans-serif;
+  /* font-size: 14px; */
+  text-align: center;
+  line-height: 25px;
+  margin-top: 30px;
+}
+
+.proceso .container img{
+  width: 90px;
+  margin-top: 40px;
+  margin-bottom: -30px;
+}
+
+.proceso .container .item{
+  display: flex;
+  flex-direction: column;
+
+  justify-items: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.proceso .left img{
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      bottom: 20px;}
