@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../icons/fonts/icomoon.eot?frgqqx');
+  src:  url('../../icons/fonts/icomoon.eot?frgqqx#iefix') format('embedded-opentype'),
+    url('../../icons/fonts/icomoon.ttf?frgqqx') format('truetype'),
+    url('../../icons/fonts/icomoon.woff?frgqqx') format('woff'),
+    url('../../icons/fonts/icomoon.svg?frgqqx#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-feature-settings: normal;
+          font-feature-settings: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e900";
+}
+
 .header{
   display: block;
   background: white;
@@ -235,8 +267,6 @@
 }
 
 .portafolio .image-container.item{
-  /* background: lightblue;
-  border: solid red 1px; */
   margin: 0;
 }
 
@@ -244,14 +274,11 @@
   width: 100%;
   vertical-align: top;
   height: 100%;
-  /* position: relative; */
-  /* bottom: 10%; */
-  /* right: 10%; */
 }
 
 .image-container figure{
-  height: 100%;
-  /* overflow: hidden; */
+  height: auto;
+  width: 100%;
   display: block;
 }
 
@@ -476,38 +503,6 @@
 
 /* --------------- icono --------------------- */
 
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../icons/fonts/icomoon.eot?frgqqx');
-  src:  url('../icons/fonts/icomoon.eot?frgqqx#iefix') format('embedded-opentype'),
-    url('../icons/fonts/icomoon.ttf?frgqqx') format('truetype'),
-    url('../icons/fonts/icomoon.woff?frgqqx') format('woff'),
-    url('../icons/fonts/icomoon.svg?frgqqx#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  -webkit-font-feature-settings: normal;
-          font-feature-settings: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-menu:before {
-  content: "\e900";
-}
-
 /* ------------------ CONFIGURACIONES GENERALES/CONSTANTES -------------- */
 
 html {
@@ -676,10 +671,123 @@ Comienza en un max-width de 1170 */
   }
 }
 
-@media screen and (max-width: 1100px){
-.portada .background{
-    height: 500px;
+@media screen and (max-width: 970px){
+  .header{
+    left: 0;
   }
+  
+  .image-container figure{
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .proceso .right p, .proceso .right h3{
+    /* width: 100%; */
+    padding: 0;
+    margin: 0;
+  } 
+  .proceso p{
+    margin: 0 40px;
+  }
+  
+  .proceso .right h3{
+    margin-bottom: 15px;
+  }
+  
+  .proceso .container{
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: initial;
+  }
+  
+  .footer .contact .left {
+    width: 200px;
+  }
+
+  .footer{
+    grid-template-columns: 55% 45%;
+    height: auto;
+  }
+
+  .footer .aviso p{
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
+  .footer .clique{
+    font-size: 20px !important;
+    margin-bottom: 0;
+    /* text-align: center;  */
+  }
+  
+  .footer .aviso{
+    line-height: .6em;
+  }
+  
+  .footer .aviso a{
+    font-size: 2em;
+  }
+  p{
+    font-size: 16px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 380px){
+  
+  .header .logosolo{
+    left:0;
+  }
+
+  .hamburger{
+    background: transparent;
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    top: 7px;
+  }
+
+
+  .texto h3, .autor h3{
+    background: rgba(20, 20, 20, .3);
+    border-radius: 20px;
+  }
+
+  .autor h3{
+    width: 110px;
+  }
+
+  .servicios h3{
+    font-size: 15px;
+  }
+
+  .servicios .item{
+    font-size: .8em;
+  }
+
+  .proyecto h3, .iguala h3{
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .footer{
+    height: 720px;
+  }
+
+  .footer .aviso a{
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 1100px){
+  .portada .background{
+      height: 500px;
+    }
   
   .servicios .container{
     display: block;
@@ -710,6 +818,10 @@ Comienza en un max-width de 1170 */
     margin: 0 auto;
   }
 
+  .iguala, .proyecto {
+    padding: 0;
+  }
+
   .footer .aviso, .footer .contact{
     font-size: .8em;
     line-height: 1em;
@@ -730,90 +842,77 @@ Comienza en un max-width de 1170 */
     font-size: 2em;
     text-align: center;
   }
+}
+
+@media screen and (max-width: 620px){
+  
+  .texto h3{
+    font-size: 22px;
+    width: 250px;
+    margin-top: 50px;
+  }
+  
+  .autor h3{
+    font-size: 16px;
+  }
+  .portafolio .image-container{
+    grid-template-rows: repeat(6,250px);
+    grid-template-columns: 90%;
+    grid-template-areas: "image-1"
+    "image-2"
+    "image-3"
+    "image-4"
+    "image-5"
+    "image-6";
+  }
+  
+  .portafolio .image-container .item{
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .portafolio .image-container .item img{
+    width: 100%;
+    position: relative;
+    bottom: 10%;
+  }
 
   .iguala, .proyecto {
-    padding: 0;
+    width: 200px;
+    height: auto;
+  }
+  
+  .footer{
+    height: 650px;
+  }
+  
+  .footer .contact .right p, .footer .contact .left p{
+    margin-top: 10px;
+  }
+  
+  p{
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+  
+  h2{
+    font-size: 18px;
   }
 }
 
-@media screen and (max-width: 970px){
-  p{
-    font-size: 16px;
-  }
-
-  h2{
-    font-size: 30px;
-  }
+@media screen and (max-width: 400px){
   
-  /* .proceso .item{
-    display: grid !important;
-    grid-template-columns: 35% 60%;
-    align-items: center;
-  }
-
-  .proceso .left img{
-    width: 100%;
-    align-self: right;
-  } */
-  
-  .proceso .right p, .proceso .right h3{
-    /* width: 100%; */
-    padding: 0;
-    margin: 0;
-  }
-
-  .image-container figure{
-    height: 100%;
-    width: 100%;
-    /* overflow: hidden; */
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .footer .contact .left {
-    width: 200px;
-  }
-
-  .proceso p{
-    margin: 0 40px;
-  }
-
-  .proceso .right h3{
-    margin-bottom: 15px;
+  .iguala, .proyecto {
+    width: 150px;
   }
 
   .proceso .container{
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: initial;
+    margin-top: 30px;
   }
 
   .footer{
-    grid-template-columns: 55% 45%;
-    height: auto;
-  }
-
-  .header{
-    left: 0;
-  }
-
-  .footer .aviso p{
-    margin-top: 10px;
-    font-size: 14px;
-  }
-
-  .footer .clique{
-    font-size: 20px !important;
-    margin-bottom: 0;
-    /* text-align: center;  */
-  }
-
-  .footer .aviso{
-    line-height: .6em;
-  }
-
-  .footer .aviso a{
-    font-size: 2em;
+    height: 700px;
   }
 }
 
@@ -855,132 +954,4 @@ Comienza en un max-width de 1170 */
     width: initial;
     text-align: center;
   }
-}
-
-@media screen and (max-width: 620px){
-
-  p{
-    font-size: 14px;
-    letter-spacing: 0;
-  }
-
-  h2{
-    font-size: 18px;
-  }
-  .iguala, .proyecto {
-    width: 200px;
-    height: auto;
-  }
-
-  .footer{
-    height: 650px;
-  }
-
-  .footer .contact .right p, .footer .contact .left p{
-    margin-top: 10px;
-  }
-
-  .texto h3{
-    font-size: 22px;
-    width: 250px;
-    margin-top: 50px;
-  }
-
-  .autor h3{
-  font-size: 16px;
-  }
-
-  /* .hamburger{
-  padding-left: 30px;
-  } */
-
-  .portafolio .image-container{
-    grid-template-rows: repeat(6,250px);
-    grid-template-columns: 90%;
-    grid-template-areas: "image-1"
-                          "image-2"
-                          "image-3"
-                          "image-4"
-                          "image-5"
-                          "image-6";
-  }
-
-  .portafolio .image-container .item{
-    width: 80%;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .portafolio .image-container .item img{
-    width: 100%;
-    position: relative;
-    bottom: 10%;
-  }
-
-
-
-}
-
-@media screen and (max-width: 400px){
-  
-  .iguala, .proyecto {
-    width: 150px;
-  }
-
-  .footer{
-    height: 700px;
-  }
-
-  .proceso .container{
-    margin-top: 30px;
-  }
-}
-
-@media screen and (max-width: 380px){
-  
-  .header .logosolo{
-    left:0;
-  }
-
-  .hamburger{
-    background: transparent;
-    font-size: 50px;
-    width: 50px;
-    height: 50px;
-    right: 15px;
-    top: 7px;
-  }
-  
-  .footer{
-    height: 720px;
-  }
-
-  .footer .aviso a{
-    font-size: 1.2em;
-  }
-
-  .texto h3, .autor h3{
-    background: rgba(20, 20, 20, .3);
-    border-radius: 20px;
-  }
-
-  .autor h3{
-    width: 110px;
-  }
-
-  .servicios h3{
-    font-size: 15px;
-  }
-
-  .servicios .item{
-    font-size: .8em;
-  }
-
-  .proyecto h3, .iguala h3{
-    font-size: 1em;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-  }
-
-  
 }

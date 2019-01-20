@@ -148,3 +148,25 @@
     display: block;
   }
 }
+
+@media screen and (max-width: 970px){
+  .header{
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 380px){
+  
+  .header .logosolo{
+    left:0;
+  }
+
+  .hamburger{
+    background: transparent;
+    font-size: 50px;
+    width: 50px;
+    height: 50px;
+    right: 15px;
+    top: 7px;
+  }
+}

@@ -1,3 +1,4 @@
+@import 'icon.css';
 @import 'header.css';
 @import 'portada.css';
 @import 'servicios.css';
@@ -8,35 +9,7 @@
 
 /* --------------- icono --------------------- */
 
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../icons/fonts/icomoon.eot?frgqqx');
-  src:  url('../icons/fonts/icomoon.eot?frgqqx#iefix') format('embedded-opentype'),
-    url('../icons/fonts/icomoon.ttf?frgqqx') format('truetype'),
-    url('../icons/fonts/icomoon.woff?frgqqx') format('woff'),
-    url('../icons/fonts/icomoon.svg?frgqqx#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
 
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-menu:before {
-  content: "\e900";
-}
 
 /* ------------------ CONFIGURACIONES GENERALES/CONSTANTES -------------- */
 
@@ -143,67 +116,6 @@ p{
 
 /* ----------------- Responsive Design ------------------- */
 
-@media screen and (max-width: 1100px){
-.portada .background{
-    height: 500px;
-  }
-  
-  .servicios .container{
-    display: block;
-    font-size: 1.1em;
-    width: 90%;
-  }
-
-  .servicios{
-    margin: 0 5%;
-  }
-
-  .servicios .item{
-    position: relative;
-    width: 120%;
-    height: 120%;
-    right: 10%;
-    bottom: 10%;
-  }
-
-  .portafolio .image-container{
-    margin-top: 70px;
-    grid-template: repeat(3,250px) / repeat(2, 45%);
-    grid-template-areas: "image-1 image-2" 
-                         "image-3 image-4"
-                         "image-5 image-6";
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  .footer .aviso, .footer .contact{
-    font-size: .8em;
-    line-height: 1em;
-  }
-
-  .footer .contact{
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: top;
-  }
-
-  .footer .contact .left{
-    width: 350px;
-  }
-
-  .footer a{
-    font-size: 2em;
-    text-align: center;
-  }
-
-  .iguala, .proyecto {
-    padding: 0;
-  }
-}
-
-
 
 @media screen and (max-width: 970px){
   p{
@@ -213,247 +125,24 @@ p{
   h2{
     font-size: 30px;
   }
-  
-  /* .proceso .item{
-    display: grid !important;
-    grid-template-columns: 35% 60%;
-    align-items: center;
-  }
-
-  .proceso .left img{
-    width: 100%;
-    align-self: right;
-  } */
-  
-  .proceso .right p, .proceso .right h3{
-    /* width: 100%; */
-    padding: 0;
-    margin: 0;
-  }
-
-  .image-container figure{
-    height: 100%;
-    width: 100%;
-    /* overflow: hidden; */
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-
-  .footer .contact .left {
-    width: 200px;
-  }
-
-  .proceso p{
-    margin: 0 40px;
-  }
-
-  .proceso .right h3{
-    margin-bottom: 15px;
-  }
-
-  .proceso .container{
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: initial;
-  }
-
-  .footer{
-    grid-template-columns: 55% 45%;
-    height: auto;
-  }
-
-  .header{
-    left: 0;
-  }
-
-  .footer .aviso p{
-    margin-top: 10px;
-    font-size: 14px;
-  }
-
-  .footer .clique{
-    font-size: 20px !important;
-    margin-bottom: 0;
-    /* text-align: center;  */
-  }
-
-  .footer .aviso{
-    line-height: .6em;
-  }
-
-  .footer .aviso a{
-    font-size: 2em;
-  }
-}
-
-@media screen and (max-width: 785px){
-  .footer{
-    grid-template-rows: repeat(2,1fr);
-    grid-template-columns: initial;
-    grid-template-areas: "aviso"
-                         "contacto";
-    align-items: center;
-    justify-items: center;
-    grid-row-gap: 0;
-    height: auto; 
-  }
-
-  .footer .aviso{
-    grid-area: aviso;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .footer .aviso a{
-    margin-top: 40px;
-  }
-
-  .footer .contact{
-    grid-area: contacto;
-    margin-top: 0;
-    align-self: center;
-  }
-
-  .footer .contact p{
-    margin-top: 5px;
-  }
-
-  .footer .clique{
-    width: initial;
-    text-align: center;
-  }
 }
 
 
 @media screen and (max-width: 620px){
-
+  
   p{
     font-size: 14px;
     letter-spacing: 0;
   }
-
+  
   h2{
     font-size: 18px;
   }
-  .iguala, .proyecto {
-    width: 200px;
-    height: auto;
-  }
-
-  .footer{
-    height: 650px;
-  }
-
-  .footer .contact .right p, .footer .contact .left p{
-    margin-top: 10px;
-  }
-
-  .texto h3{
-    font-size: 22px;
-    width: 250px;
-    margin-top: 50px;
-  }
-
-  .autor h3{
-  font-size: 16px;
-  }
-
-  /* .hamburger{
-  padding-left: 30px;
-  } */
-
-  .portafolio .image-container{
-    grid-template-rows: repeat(6,250px);
-    grid-template-columns: 90%;
-    grid-template-areas: "image-1"
-                          "image-2"
-                          "image-3"
-                          "image-4"
-                          "image-5"
-                          "image-6";
-  }
-
-  .portafolio .image-container .item{
-    width: 80%;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .portafolio .image-container .item img{
-    width: 100%;
-    position: relative;
-    bottom: 10%;
-  }
-
-
-
-}
-
-
-@media screen and (max-width: 400px){
   
-  .iguala, .proyecto {
-    width: 150px;
-  }
-
-  .footer{
-    height: 700px;
-  }
-
-  .proceso .container{
-    margin-top: 30px;
-  }
-}
-
-@media screen and (max-width: 380px){
-  
-  .header .logosolo{
-    left:0;
-  }
-
-  .hamburger{
-    background: transparent;
-    font-size: 50px;
-    width: 50px;
-    height: 50px;
-    right: 15px;
-    top: 7px;
-  }
-  
-  .footer{
-    height: 720px;
-  }
-
-  .footer .aviso a{
-    font-size: 1.2em;
-  }
-
-  .texto h3, .autor h3{
-    background: rgba(20, 20, 20, .3);
-    border-radius: 20px;
-  }
-
-  .autor h3{
-    width: 110px;
-  }
-
-  .servicios h3{
-    font-size: 15px;
-  }
-
-  .servicios .item{
-    font-size: .8em;
-  }
-
-  .proyecto h3, .iguala h3{
-    font-size: 1em;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-  }
-
   
 }
+
+
 
 
 /* NOTAS para Responsive
