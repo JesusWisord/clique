@@ -667,8 +667,8 @@ Comienza en un max-width de 1170 */
   }
     
   .image-container figure {
-    height: auto;
-    width: 100%;
+    height: 90%;
+    width: auto;
     overflow: hidden;
     display: flex;
     align-content: center;
