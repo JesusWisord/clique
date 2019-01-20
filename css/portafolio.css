@@ -1,0 +1,124 @@
+.portafolio:before{
+  height: 50px;
+  display: block;
+  content: '';
+}
+
+.portafolio{
+  /* width: 1000px; */
+  /* font-size: 16px; */
+  align-content: center;
+}
+
+.portafolio h6{
+  font-family: 'Lato', sans-serif;
+  color: #7F7F7F;
+  font-size: 15px;
+  font-weight: lighter;
+  margin: 0 1%;
+  line-height: 30px;
+  letter-spacing: 2px;
+  width: 1000px;
+}
+
+.portafolio p{
+  margin: 0 80px;
+  padding-bottom: 50px;
+}
+
+.portafolio .image-container{
+  margin-top: 50px; 
+  display: grid;
+  /* width: 1000px; */
+  grid-template: 1fr 1fr / 100px repeat(3, 1fr) 100px;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 10px;
+  margin: 0 auto;
+  grid-template-areas: ". image-1 image-2 image-3 ."
+                       ". image-4 image-5 image-6 .";
+}
+
+.portafolio .image-container.item{
+  margin: 0;
+}
+
+.image-container img {
+  width: 100%;
+  vertical-align: top;
+  height: 100%;
+}
+
+.image-container figure{
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+.image-1{
+  grid-area: image-1;
+}
+.image-2{
+  grid-area: image-2;
+}
+.image-3{
+  grid-area: image-3;
+}
+.image-4{
+  grid-area: image-4;
+}
+.image-5{
+  grid-area: image-5;
+}
+.image-6{
+  grid-area: image-6;
+}
+
+@media screen and (max-width: 1100px){
+
+  .portafolio .image-container{
+    margin-top: 70px;
+    grid-template: repeat(3,250px) / repeat(2, 45%);
+    grid-template-areas: "image-1 image-2" 
+                         "image-3 image-4"
+                         "image-5 image-6";
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 970px){
+  
+  .image-container figure{
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 620px){
+  .portafolio .image-container{
+    grid-template-rows: repeat(6,250px);
+    grid-template-columns: 90%;
+    grid-template-areas: "image-1"
+    "image-2"
+    "image-3"
+    "image-4"
+    "image-5"
+    "image-6";
+  }
+  
+  .portafolio .image-container .item{
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .portafolio .image-container .item img{
+    width: 100%;
+    position: relative;
+    bottom: 10%;
+  }
+}
