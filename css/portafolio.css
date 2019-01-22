@@ -30,7 +30,7 @@
   margin-top: 50px; 
   display: grid;
   /* width: 1000px; */
-  grid-template: 1fr 1fr / 100px repeat(3, 1fr) 100px;
+  grid-template: repeat(2, 300px) / 100px repeat(3, 1fr) 100px;
   justify-items: center;
   align-items: center;
   grid-gap: 10px;
@@ -44,15 +44,18 @@
 }
 
 .image-container img {
-  width: 100%;
+  width: 120%;
   vertical-align: top;
-  height: 100%;
+  height: auto;
 }
 
 .image-container figure{
-  height: auto;
+  height: 100%;
   width: 100%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .image-1{
@@ -78,11 +81,11 @@
 
   .portafolio .image-container{
     margin-top: 70px;
-    grid-template: repeat(3,1fr) / repeat(2, 45%);
-    grid-template-areas: "image-1 image-2" 
-                         "image-3 image-4"
-                         "image-5 image-6";
-    justify-content: center;
+    grid-template: repeat(3,200px) / minmax(10px, 20px) repeat(2, 1fr) minmax(10px, 20px);
+    grid-template-areas: ". image-1 image-2 ." 
+                         ". image-3 image-4 ."
+                         ". image-5 image-6 .";
+    justify-items: center;
     align-items: center;
     margin: 0 auto;
   }
@@ -90,23 +93,21 @@
 
 @media screen and (max-width: 1170px){
     
-  .image-container figure {
+  /* .image-container figure {
     height: 90%;
     width: auto;
     overflow: hidden;
     display: flex;
     align-content: center;
     justify-content: center;
-  }
+  } */
 
 }
 
 @media screen and (max-width: 970px){
   
-  .image-container figure{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+  .image-container img{
+    width: 100%;
   }
 }
 
@@ -120,17 +121,18 @@
     "image-4"
     "image-5"
     "image-6";
+    justify-content: center;
   }
   
-  .portafolio .image-container .item{
+  /* .portafolio .image-container .item{
     width: 80%;
     height: 100%;
     overflow: hidden;
-  }
+  } */
   
-  .portafolio .image-container .item img{
+  /* .portafolio .image-container .item img{
     width: 100%;
     position: relative;
     bottom: 10%;
-  }
+  } */
 }

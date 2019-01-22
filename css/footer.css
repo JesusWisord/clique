@@ -16,6 +16,7 @@
   margin-top: 25px;
   display: inline-block;
   line-height: 30px;
+  margin: 0 10%;
 }
 
 .footer .aviso{
@@ -171,7 +172,7 @@
   }
   
   .footer .contact .right p, .footer .contact .left p{
-    margin-top: 10px;
+    margin: 0 10%;
   }
 }
 
