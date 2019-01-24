@@ -40,12 +40,16 @@ h2.subtitle{
   @apply --bottomBorder;
 }
 
+p.description{
+  margin: 0 80px;
+}
+
 p{
   font-family: 'Lato', sans-serif;
   color: #7F7F7F;
   font-size: 16px;
   font-weight: lighter;
-  margin: 0 80px;
+  /* margin: 0 80px; */
   line-height: 30px;
   letter-spacing: 2px;
   /* width: 1000px; */
