@@ -7,6 +7,7 @@
   overflow: hidden;
   width: 100vw;
   grid-gap: 100px;
+  margin-top: 40px;
   /* font-size: 16px; */
   /* align-items: left; */
 }
@@ -16,6 +17,7 @@
   margin-top: 25px;
   display: inline-block;
   line-height: 30px;
+  margin: 0 10%;
 }
 
 .footer .aviso{
@@ -171,7 +173,7 @@
   }
   
   .footer .contact .right p, .footer .contact .left p{
-    margin-top: 10px;
+    margin: 0 10%;
   }
 }
 
