@@ -1,0 +1,7 @@
+:root {
+  --bottomBorder: {
+    border-bottom: solid 5px;
+    border-image: linear-gradient(to right, pink 0%, pink 3%,#ECF0F1 3%, #ECF0F1 100%);
+    border-image-slice: 1;
+  };
+}
